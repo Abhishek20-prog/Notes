@@ -10,7 +10,11 @@ const [showForm, setShowForm] = useState(false);
   };
 
   const addNote = (newNote) => {
-    setNotes([...notes, newNote]);
+    localStorage.setItem("notes", JSON.stringify([...notes, newNote]));
+   
+  notes.push(newNote);
+  
+   
     setShowForm(false);
   };
   

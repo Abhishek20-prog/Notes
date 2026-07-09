@@ -11,6 +11,9 @@ const Form = ({ addNote }) => {
       id: Date.now(),
       title: title,
       note: note,
+      createdAt: new Date().toLocaleString(),
+      updatedAt: new Date().toLocaleString(),
+      
     };
 
     addNote(newNote);
